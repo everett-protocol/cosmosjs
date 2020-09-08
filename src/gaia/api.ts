@@ -6,6 +6,7 @@ import * as Distribution from "../x/distribution";
 import * as Gov from "../x/gov";
 import * as Slashing from "../x/slashing";
 import * as Staking from "../x/staking";
+import * as Link from "../x/link";
 import { defaultTxEncoder } from "../common/stdTx";
 import { stdTxBuilder } from "../common/stdTxBuilder";
 import { Context } from "../core/context";
@@ -50,6 +51,7 @@ export class GaiaApi extends Api<GaiaRest> {
           Gov.registerCodec(codec);
           Slashing.registerCodec(codec);
           Staking.registerCodec(codec);
+          Link.registerCodec(codec);
         }
       },
       ...coreConfig
